@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Laconi Conseil — Le pont France–Portugal | ImHo Partners</title>
+<meta name="description" content="Laconi Conseil, entité du groupe ImHo Partners, conseille les opérations cross-border France–Portugal : hôtellerie, immobilier, cession-acquisition, financement et développement." />
+<style>
+  :root{
+    --navy:#0d2137; --navy-2:#123a5c; --ink:#1c2b3a; --muted:#5b6b7b;
+    --gold:#b98a2f; --gold-soft:#e7d9b8; --paper:#faf7f1; --white:#ffffff;
+    --line:#e4ded2; --green:#0e5c4a;
+    font-family:"Georgia","Times New Roman",serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--paper);color:var(--ink);line-height:1.6}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  a{color:inherit}
+
+  /* Header */
+  header.site{position:sticky;top:0;z-index:50;background:rgba(250,247,241,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1080px;margin:0 auto}
+  .brand{display:flex;align-items:baseline;gap:10px}
+  .brand .logo{font-size:1.35rem;letter-spacing:.14em;font-weight:700;color:var(--navy)}
+  .brand .logo span{color:var(--gold)}
+  .brand .group{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  nav.menu{display:flex;gap:26px;font-family:system-ui,sans-serif;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase}
+  nav.menu a{text-decoration:none;color:var(--navy);padding-bottom:2px;border-bottom:2px solid transparent;transition:.2s}
+  nav.menu a:hover{border-color:var(--gold)}
+  @media(max-width:760px){nav.menu{display:none}}
+
+  /* Hero */
+  .hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 60%,#1a4a70 100%);color:var(--white);padding:88px 0 96px;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;border:60px solid rgba(185,138,47,.15)}
+  .hero .kicker{font-family:system-ui,sans-serif;font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:18px}
+  .hero h1{font-size:clamp(2rem,4.5vw,3.2rem);font-weight:400;line-height:1.2;max-width:720px}
+  .hero h1 em{font-style:italic;color:var(--gold-soft)}
+  .hero p.lead{margin-top:22px;max-width:640px;color:#d9e2ec;font-size:1.05rem}
+  .hero .cities{margin-top:34px;display:flex;gap:22px;font-family:system-ui,sans-serif;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:#9fb4c8}
+  .hero .cities b{color:var(--gold-soft);font-weight:600}
+
+  /* Sections */
+  section{padding:72px 0}
+  .kicker{font-family:system-ui,sans-serif;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+  h2{font-size:clamp(1.5rem,3vw,2.1rem);font-weight:400;color:var(--navy);margin:10px 0 14px}
+  .intro{max-width:680px;color:var(--muted)}
+
+  /* Profiles */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:36px}
+  .card{background:var(--white);border:1px solid var(--line);border-top:3px solid var(--gold);padding:28px 24px;border-radius:6px;transition:.2s}
+  .card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(13,33,55,.10)}
+  .card h3{font-size:1.15rem;color:var(--navy);margin-bottom:10px;font-weight:600}
+  .card p{font-size:.95rem;color:var(--muted)}
+  .card .tag{display:inline-block;font-family:system-ui,sans-serif;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--green);background:#eaf3ef;padding:4px 10px;border-radius:20px;margin-bottom:12px}
+
+  /* Expertise list */
+  .expertise{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .exp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:0;margin-top:30px}
+  .exp-item{padding:26px 30px;border-left:1px solid var(--line)}
+  .exp-item:nth-child(odd){border-left:none}
+  .exp-item .num{font-family:system-ui,sans-serif;font-size:.72rem;letter-spacing:.18em;color:var(--gold)}
+  .exp-item h3{font-size:1.05rem;color:var(--navy);margin:8px 0 6px;font-weight:600}
+  .exp-item p{font-size:.92rem;color:var(--muted)}
+
+  /* Method */
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:36px;counter-reset:step}
+  .step{background:var(--white);border:1px solid var(--line);border-radius:6px;padding:26px 22px;position:relative}
+  .step::before{counter-increment:step;content:"0" counter(step);font-family:system-ui,sans-serif;font-size:2rem;font-weight:700;color:var(--gold-soft);display:block;margin-bottom:6px}
+  .step h3{font-size:1rem;color:var(--navy);font-weight:600;margin-bottom:8px}
+  .step p{font-size:.9rem;color:var(--muted)}
+
+  /* Assets */
+  .assets .chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+  .chip{font-family:system-ui,sans-serif;font-size:.85rem;background:var(--white);border:1px solid var(--line);color:var(--navy);padding:10px 18px;border-radius:30px}
+
+  /* CTA / contact */
+  .contact{background:var(--navy);color:var(--white)}
+  .contact h2{color:var(--white)}
+  .contact .intro{color:#c8d4e0}
+  .contact-box{margin-top:30px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:34px;max-width:640px}
+  .contact-box .mail{display:inline-block;font-size:1.15rem;color:var(--gold-soft);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:2px;margin:8px 0 16px}
+  .contact-box .promise{font-size:.9rem;color:#9fb4c8}
+  .badge48{display:inline-block;font-family:system-ui,sans-serif;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;background:var(--gold);color:var(--navy);padding:5px 12px;border-radius:20px;margin-bottom:14px}
+
+  footer{background:#0a1929;color:#7d90a3;padding:34px 0;font-family:system-ui,sans-serif;font-size:.78rem}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  footer a{color:#b8c6d4;text-decoration:none}
+
+  /* reveal on scroll */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <div class="brand">
+      <div class="logo">LACONI<span>&nbsp;CONSEIL</span></div>
+      <div class="group">une entité ImHo Partners</div>
+    </div>
+    <nav class="menu">
+      <a href="#profils">Profils</a>
+      <a href="#expertises">Expertises</a>
+      <a href="#methode">Méthode</a>
+      <a href="#actifs">Actifs</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="kicker">France &nbsp;·&nbsp; Portugal — opérations cross-border</div>
+    <h1>Le pont entre les actifs portugais et les opérateurs français de l'hôtellerie et de l'immobilier.</h1>
+    <p class="lead">Laconi Conseil, entité dédiée du groupe ImHo Partners, a la charge de traiter par le conseil les opérations cross-border entre la France et le Portugal&nbsp;: cession-acquisition, financement, développement et repositionalnement d'actifs — dans la confidentialité.</p>
+    <div class="cities"><span><b>Paris</b></span><span><b>Lisbonne</b></span><span><b>Porto</b></span></div>
+  </div>
+</div>
+
+<section id="profils" class="reveal">
+  <div class="wrap">
+    <div class="kicker">Trois publics, un interlocuteur unique</div>
+    <h2>Sélectionnez votre profil</h2>
+    <p class="intro">Cabinet franco-portugais, Laconi Conseil met en relation — de façon confidentielle et qualifiée — propriétaires d'actifs au Portugal et opérateurs français.</p>
+    <div class="cards">
+      <div class="card">
+        <span class="tag">Groupes hôteliers</span>
+        <h3>Développer votre réseau au Portugal</h3>
+        <p>Implantation, acquisition d'actifs ou identification d'opportunités de développement pour étendre votre footprint hôtelier sur le marché portugais.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Investisseurs</span>
+        <h3>Investir dans des actifs à valeur ajoutée</h3>
+        <p>Sourcing d'actifs hôteliers et immobiliers sélectionnés, analyse de marché et positionnement, structuration financière avec nos partenaires de capital.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Promoteurs</span>
+        <h3>Trouver foncier et projets</h3>
+        <p>Identification de foncier et de projets à développer ou requalifier, accompagnement de bout en bout jusqu'à la formalisation des accords.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Propriétaires d'actifs au Portugal</span>
+        <h3>Présenter votre actif au marché français</h3>
+        <p>Évaluation initiale sans engagement, présentation confidentielle à des opérateurs qualifiés : vente, financement ou développement de votre actif.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="expertises" class="expertise reveal">
+  <div class="wrap">
+    <div class="kicker">Conseil · Développement · Stratégie</div>
+    <h2>Nos cinq expertises</h2>
+    <p class="intro">Un interlocuteur unique pour chaque mission, de la première conversation à la signature.</p>
+    <div class="exp-grid">
+      <div class="exp-item">
+        <span class="num">01</span>
+        <h3>Stratégie d'implantation ou de cession</h3>
+        <p>Définition de la stratégie, analyse de marché et positionnement des projets entre la France et le Portugal.</p>
+      </div>
+      <div class="exp-item">
+        <span class="num">02</span>
+        <h3>Cession &amp; acquisition d'actifs</h3>
+        <p>Approche discrète, mise en relation confidentielle et négociation sécurisée entre propriétaires et acquéreurs qualifiés.</p>
+      </div>
+      <div class="exp-item">
+        <span class="num">03</span>
+        <h3>Recherche de financement</h3>
+        <p>Structuration financière et juridique aux côtés de partenaires en capital jusqu'à la finalisation des accords.</p>
+      </div>
+      <div class="exp-item">
+        <span class="num">04</span>
+        <h3>Veille d'opportunités</h3>
+        <p>Veille active du marché pour identifier en continu des opportunités ciblées, y compris off-market.</p>
+      </div>
+      <div class="exp-item">
+        <span class="num">05</span>
+        <h3>Développement &amp; repositionalnement</h3>
+        <p>Analyse du potentiel d'usage, stratégie de repositionalnement et accompagnement des projets de requalification.</p>
+      </div>
+      <div class="exp-item">
+        <span class="num">—</span>
+        <h3>Accompagnement complet</h3>
+        <p>Un suivi structuré de bout en bout : négociations, structuration financière et juridique, jusqu'à la finalisation de la transaction.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="methode" class="reveal">
+  <div class="wrap">
+    <div class="kicker">Notre méthode</div>
+    <h2>Le pont, en quatre temps</h2>
+    <p class="intro">Constence et cohérence à chaque étape, de la première écoute à la signature.</p>
+    <div class="steps">
+      <div class="step">
+        <h3>Écoute &amp; cadrage</h3>
+        <p>Comprendre l'actif, vos objectifs et le cadre de la mission dès le premier échange.</p>
+      </div>
+      <div class="step">
+        <h3>Qualification</h3>
+        <p>Analyse du marché et du potentiel de l'actif ou du projet.</p>
+      </div>
+      <div class="step">
+        <h3>Présentation</h3>
+        <p>Mise en relation confidentielle avec des opérateurs qualifiés, en France ou au Portugal.</p>
+      </div>
+      <div class="step">
+        <h3>Structuration &amp; clôture</h3>
+        <p>Accompagnement des négociations et des formalisations jusqu'à la conclusion.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="actifs" class="assets reveal">
+  <div class="wrap">
+    <div class="kicker">Segments couverts</div>
+    <h2>Les actifs que nous traitons</h2>
+    <div class="chips">
+      <span class="chip">Hôtels — du boutique aux grandes unités</span>
+      <span class="chip">Résidences étudiantes — grandes villes universitaires</span>
+      <span class="chip">Appart'hôtels — zones touristiques</span>
+      <span class="chip">Parcs de campings &amp; lodges — de l'Algarve au Nord</span>
+      <span class="chip">Bâtiments à reconvertir en hospitalité</span>
+      <span class="chip">Terrains — résidentiel &amp; développement hôtelier</span>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact reveal">
+  <div class="wrap">
+    <div class="kicker">Contact</div>
+    <h2>Parlons de votre projet, en toute confidentialité</h2>
+    <p class="intro">Un échange confidentiel et sans engagement, en français, portugais ou anglais.</p>
+    <div class="contact-box">
+      <span class="badge48">Réponse sous 48 h</span><br/>
+      <a class="mail" href="mailto:contact@laconi-conseil.com">contact@laconi-conseil.com</a>
+      <p class="promise">Paris &nbsp;·&nbsp; Lisbonne &nbsp;·&nbsp; Porto — Laconi Conseil, entité du groupe ImHo Partners.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Laconi Conseil — une entité ImHo Partners. Tous droits réservés.</span>
+    <span><a href="mailto:contact@laconi-conseil.com">contact@laconi-conseil.com</a></span>
+  </div>
+</footer>
+
+<script>
+  // Reveal-on-scroll animation
+  const io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); }
+    });
+  },{threshold:0.12});
+  document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+</script>
+</body>
+</html>
